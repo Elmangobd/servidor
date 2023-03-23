@@ -15,7 +15,6 @@ app.use(authRoutes);
 //
 
 app.get('/',requireToken,  (req, res) => {
-    
     console.log(req.user);
     res.send(req.user);
 })
