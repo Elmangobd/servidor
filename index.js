@@ -15,7 +15,9 @@ app.use(authRoutes);
 //
 
 app.get('/',requireToken,  (req, res) => {
-    res.send("este es el inicio de mi api");
+    
+    console.log(req.user);
+    res.send(req.user);
 })
 
 app.listen(port, () => {
