@@ -14,10 +14,9 @@ app.use(bodyParser.json());
 app.use(authRoutes);
 //
 
-app.get('/',requireToken,  (req, res) => {
-    console.log(req.user);
-    res.send(req.user);
-})
+app.get('/', (req,res)=>{
+    res.send('Bienvenido ami api');
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
